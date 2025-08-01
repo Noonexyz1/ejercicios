@@ -16,6 +16,8 @@ public class Main {
         //mostrarElementosSinRepetir();
         //mostrarSiHayVocales();
         //palabraPalindromo();
+
+        Practica practica = new Practica();
     }
 
     private static void palabraPalindromo() {
