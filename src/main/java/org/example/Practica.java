@@ -45,11 +45,39 @@ public class Practica {
         return capicuoPalabra.equals(capicuoToCompare);
     }
 
-    public int contadorCaracteresRepetidos(String palabra) {
-        return 0;
+    public void contadorCaracteresRepetidos(String palabra) {
+        List<String> listaLetras = new ArrayList<>(Arrays.asList(palabra.split("")));
+        Set<String> setLetras = new HashSet<>(listaLetras);
+
+        setLetras.forEach(letra -> {
+            var contador = 0;
+            for (String listaLetra: listaLetras) {
+                if (letra.equals(listaLetra)) {
+                    contador++;
+                }
+            }
+            if (contador >= 2) {
+                System.out.println(letra + " se repite " + contador + " veces.");
+            }
+            contador = 0;
+        });
     }
 
     public void mostrarCaracteresRepetidos(String palabra) {
+        List<String> listaLetras = new ArrayList<>(Arrays.asList(palabra.split("")));
+        Set<String> setLetras = new HashSet<>(listaLetras);
 
+        setLetras.forEach(letra -> {
+            var contador = 0;
+            for (String listaLetra: listaLetras) {
+                if (letra.equals(listaLetra)) {
+                    contador++;
+                }
+            }
+            if (contador >= 2) {
+                System.out.println(letra + " se repite " + contador + " veces.");
+            }
+            contador = 0;
+        });
     }
 }
